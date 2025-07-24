@@ -14,6 +14,13 @@ namespace FidoClientSdk.Models
         [BsonElement("session_id")]
         public string SessionId { get; set; } = string.Empty;
 
+        [JsonPropertyName("credential_assertion")]
+        [BsonElement("credential_assertion")]
+        public CredentialAssertions CredentialAssertion { get; set; } = new();
+    }
+
+    public class CredentialAssertions
+    {
         [JsonPropertyName("publicKey")]
         [BsonElement("publicKey")]
         public PublicKeyRequestOptions PublicKey { get; set; } = new();

@@ -9,6 +9,7 @@ namespace FidoClientSdk.Interfaces
 {
     public interface IFidoApiClient
     {
+        Task<BaseResponse> ServerCredentialsRequestAsync(ServerCredentialsDto request);
         Task<MakeCredentialResponse> MakeCredentialRequestAsync(MakeCredentialRequest request);
         Task<BaseResponse> MakeCredentialResponseAsync(MakeCredentialFinishRequest responseData);
         Task<GetAssertionResponse> GetAssertionRequestAsync(GetAssertionRequest requestData);
